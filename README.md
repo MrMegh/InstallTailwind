@@ -18,13 +18,15 @@ Before running this script, ensure you have the following prerequisites installe
    git clone https://github.com/MrMegh/InstallTailwind.git
 
 3. Open a terminal or command prompt.
-
-4. Navigate to the directory containing the script.
-
-5. Make the script executable if necessary:
-6. 
    ```bash
-   chmod +x tailwindcss.sh
+   python3 tailwindcss.py
+
+5. Navigate to the directory containing the script.
+
+6. Make the script executable if necessary:
+7. 
+   ```bash
+   chmod +x tailwindcss.py
 
 # License
 ## This project is licensed under the `Apache License 2.0`.

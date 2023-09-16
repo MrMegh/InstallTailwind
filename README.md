@@ -26,8 +26,8 @@ Before running this script, ensure you have the following prerequisites installe
    ```bash
    chmod +x tailwindcss.sh
 
-#License
-##This project is licensed under the `Apache License 2.0`.
+# License
+## This project is licensed under the `Apache License 2.0`.
 
 Feel free to customize and extend this script to suit your specific project requirements.
 

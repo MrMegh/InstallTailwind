@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Bash script automates the setup of a new web project with Tailwind CSS. It creates the necessary project structure, initializes npm, sets up Tailwind CSS, and provides a basic HTML template with Tailwind CSS styles.
+This `Python3` script automates the setup of a new web project with Tailwind CSS. It creates the necessary project structure, initializes npm, sets up Tailwind CSS, and provides a basic HTML template with Tailwind CSS styles.
 
 ## Prerequisites
 
@@ -17,16 +17,13 @@ Before running this script, ensure you have the following prerequisites installe
    ```bash
    git clone https://github.com/MrMegh/InstallTailwind.git
 
+2. Navigate to the directory containing the script.
+   
 3. Open a terminal or command prompt.
-   ```bash
+   ```python
    python3 tailwindcss.py
 
-5. Navigate to the directory containing the script.
 
-6. Make the script executable if necessary:
-7. 
-   ```bash
-   chmod +x tailwindcss.py
 
 # License
 ## This project is licensed under the `Apache License 2.0`.

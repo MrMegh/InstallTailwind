@@ -2,10 +2,12 @@ import os
 import subprocess
 import time
 
-# Function to display a message with a typing effect
+# Function to display a message with a typing effect and cyber-blue color
 def display_typing_message(message):
+    CYBER_BLUE = '\033[96m'  # ANSI escape code for cyber blue color
+    RESET = '\033[0m'  # ANSI escape code to reset text color
     for char in message:
-        print(char, end='', flush=True)
+        print(f'{CYBER_BLUE}{char}{RESET}', end='', flush=True)
         time.sleep(0.03)  # Adjust the sleep duration for the typing speed
     print()
 
@@ -23,10 +25,11 @@ def create_file(file_path, content):
         file.write(content)
 
 # Function to create project structure
-def create_project(project_name):
-    display_typing_message("Creating your project folder...")
-    os.makedirs(project_name)
-    os.chdir(project_name)
+def create_project(project_name, project_path):
+    project_directory = os.path.join(project_path, project_name)
+    display_typing_message(f"Creating your project folder '{project_name}' in '{project_path}'...")
+    os.makedirs(project_directory, exist_ok=True)
+    os.chdir(project_directory)
 
     display_typing_message("Initializing npm and setting up Tailwind CSS...")
     subprocess.run(['npm', 'init', '-y'])
@@ -63,16 +66,29 @@ def create_project(project_name):
 
 if __name__ == "__main__":
     # Display your fancy name with typing effect
-    YOUR_FANCY_NAME = "YOUR_NAME_IN_BIG_LETTERS"  # Replace with your name
-    display_typing_message(f"Hello, {YOUR_FANCY_NAME}!")
+    YOUR_FANCY_NAME = """  __  __            _       ____            _             _             
+ |  \/  |          | |     |  _ \          | |           (_)            
+ | \  / | ___  __ _| |__   | |_) | __ _  __| | ___  _ __  _ _   _  __ _ 
+ | |\/| |/ _ \/ _` | '_ \  |  _ < / _` |/ _` |/ _ \| '_ \| | | | |/ _` |
+ | |  | |  __/ (_| | | | | | |_) | (_| | (_| | (_) | | | | | |_| | (_| |
+ |_|  |_|\___|\__, |_| |_| |____/ \__,_|\__,_|\___/|_| |_|_|\__, |\__,_|
+               __/ |                                         __/ |      
+              |___/                                         |___/       """
+    display_typing_message(YOUR_FANCY_NAME)
 
     # Ask for project name
     display_typing_message("What is the name of your project?")
     PROJECT_NAME = input().strip()
+
+    # Ask for the project path or use the current directory
+    display_typing_message("Where do you want to create the project? (Press Enter for current directory)")
+    PROJECT_PATH = input().strip()
+    if not PROJECT_PATH:
+        PROJECT_PATH = os.getcwd()
 
     # Check that npm and node are installed
     check_command("npm")
     check_command("node")
 
     # Create the project
-    create_project(PROJECT_NAME)
+    create_project(PROJECT_NAME, PROJECT_PATH)

@@ -20,8 +20,10 @@ Before running this script, ensure you have the following prerequisites installe
 3. Navigate to the directory containing the script.
 
 4. Make the script executable if necessary:
+5. ```bash
+   
    ```bash
-   chmod +x setup-project.sh
+   chmod +x tailwindcss.sh
 
 License
 This project is licensed under the MIT License.

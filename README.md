@@ -13,15 +13,16 @@ Before running this script, ensure you have the following prerequisites installe
 
 ## Usage
 
-1. Clone this repository or download the script to your local machine.
-
-2. Open a terminal or command prompt.
-
-3. Navigate to the directory containing the script.
-
-4. Make the script executable if necessary:
-5. ```bash
+1. Clone this repository or download the script to your local machine :
+   ```bash
    git clone https://github.com/MrMegh/InstallTailwind.git
+
+3. Open a terminal or command prompt.
+
+4. Navigate to the directory containing the script.
+
+5. Make the script executable if necessary:
+6. 
    ```bash
    chmod +x tailwindcss.sh
 

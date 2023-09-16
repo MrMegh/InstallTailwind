@@ -21,7 +21,7 @@ Before running this script, ensure you have the following prerequisites installe
 
 4. Make the script executable if necessary:
 5. ```bash
-   
+   git clone https://github.com/MrMegh/InstallTailwind.git
    ```bash
    chmod +x tailwindcss.sh
 

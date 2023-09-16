@@ -1,5 +1,6 @@
 import os
 import subprocess
+import time
 
 # Function to display a message with a typing effect
 def display_typing_message(message):
